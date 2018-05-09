@@ -1,0 +1,7 @@
+{
+  // eslint + prettier config
+  "javascript.validate.enable": false,
+  "prettier.eslintIntegration": true,
+  "javascript.format.enable": false,
+  "files.associations": { "*.js": "javascriptreact" }
+}
