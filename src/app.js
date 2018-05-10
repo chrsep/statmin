@@ -29,7 +29,7 @@ const Home = () => (
   </AppIntro>
 )
 const NotHome = () => <AppIntro>This is not home</AppIntro>
-const SomeoneElseHome = () => <AppIntro>This is someone else's home</AppIntro>
+const SomeoneElseHome = () => <AppIntro>This is someone elses home</AppIntro>
 
 const App = () => (
   <Container>
