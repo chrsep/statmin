@@ -1,18 +1,38 @@
 // @flow
 import React from "react"
+import styled from "styled-components"
 import logo from "./assets/logo.svg"
-import "./App.css"
+
+const Container = styled.div`
+  text-align: center;
+`
+const AppHeader = styled.header`
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+`
+const AppLogo = styled.img`
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+`
+const AppTitle = styled.h1`
+  font-size: 1.5em;
+`
+const AppIntro = styled.p`
+  font-size: large;
+`
 
 const App = () => (
-  <div className="App">
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <h1 className="App-title"> Welcome to React </h1>{" "}
-    </header>{" "}
-    <p className="App-intro">
+  <Container>
+    <AppHeader>
+      <AppLogo src={logo} alt="logo" />
+      <AppTitle> Welcome to React </AppTitle>{" "}
+    </AppHeader>{" "}
+    <AppIntro>
       To get started, edit <code> src / App.js </code> and save to reload.{" "}
-    </p>{" "}
-  </div>
+    </AppIntro>{" "}
+  </Container>
 )
 
 export default App
