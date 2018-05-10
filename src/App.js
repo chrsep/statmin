@@ -1,6 +1,7 @@
 // @flow
 import React from "react"
 import styled from "styled-components"
+import { Route } from "react-router-dom"
 import logo from "./assets/logo.svg"
 
 const Container = styled.div`
@@ -22,6 +23,13 @@ const AppTitle = styled.h1`
 const AppIntro = styled.p`
   font-size: large;
 `
+const Home = () => (
+  <AppIntro>
+    To get started, edit <code> src / App.js </code> and save to reload.{" "}
+  </AppIntro>
+)
+const NotHome = () => <AppIntro>This is not home</AppIntro>
+const SomeoneElseHome = () => <AppIntro>This is someone else's home</AppIntro>
 
 const App = () => (
   <Container>
@@ -29,9 +37,9 @@ const App = () => (
       <AppLogo src={logo} alt="logo" />
       <AppTitle> Welcome to React </AppTitle>{" "}
     </AppHeader>{" "}
-    <AppIntro>
-      To get started, edit <code> src / App.js </code> and save to reload.{" "}
-    </AppIntro>{" "}
+    <Route exact path="/" component={Home} />
+    <Route exact path="/nothome" component={NotHome} />
+    <Route exact path="/someoneelsehome" component={SomeoneElseHome} />
   </Container>
 )
 
