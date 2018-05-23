@@ -1,9 +1,32 @@
 // @flow
 import React from "react"
 import styled from "styled-components"
-import { Route } from "react-router-dom"
+import { Route, Link } from "react-router-dom"
 import logo from "./assets/logo.svg"
+import { Login, ReposOverview, PostsOverview } from "./pages"
 
+// COMPONENT
+export default () => (
+  <Container>
+    <AppHeader>
+      <AppLogo src={logo} alt="logo" />
+      <Link href="/" to="/">
+        Home
+      </Link>
+      <Link href="/repos" to="/repos">
+        notHome
+      </Link>
+      <Link href="/posts" to="/posts">
+        Someone Else Home
+      </Link>
+    </AppHeader>{" "}
+    <Route exact path="/" component={Login} />
+    <Route exact path="/repos" component={ReposOverview} />
+    <Route exact path="/posts" component={PostsOverview} />
+  </Container>
+)
+
+// STYLES
 const Container = styled.div`
   text-align: center;
 `
@@ -17,30 +40,3 @@ const AppLogo = styled.img`
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 `
-const AppTitle = styled.h1`
-  font-size: 1.5em;
-`
-const AppIntro = styled.p`
-  font-size: large;
-`
-const Home = () => (
-  <AppIntro>
-    To get started, edit <code> src / App.js </code> and save to reload.{" "}
-  </AppIntro>
-)
-const NotHome = () => <AppIntro>This is not home</AppIntro>
-const SomeoneElseHome = () => <AppIntro>This is someone elses home</AppIntro>
-
-const App = () => (
-  <Container>
-    <AppHeader>
-      <AppLogo src={logo} alt="logo" />
-      <AppTitle> Welcome to React </AppTitle>{" "}
-    </AppHeader>{" "}
-    <Route exact path="/" component={Home} />
-    <Route exact path="/nothome" component={NotHome} />
-    <Route exact path="/someoneelsehome" component={SomeoneElseHome} />
-  </Container>
-)
-
-export default App
