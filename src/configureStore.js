@@ -5,7 +5,7 @@
 import { createStore, applyMiddleware, compose } from "redux"
 import createSagaMiddleware from "redux-saga"
 import { fromJS } from "immutable"
-import createReducer from "./reducers/index"
+import createReducer from "./reducers"
 
 const sagaMiddleware = createSagaMiddleware()
 

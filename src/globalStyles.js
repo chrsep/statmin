@@ -1,12 +1,12 @@
+/* eslint no-unused-expressions: ["off"] */
 import { injectGlobal } from "styled-components"
 
-/* eslint no-unused-expressions: ["off"] */
 injectGlobal`
-    body {
-        display: block;
-        background-color: red;
-        margin: 0;
-        padding: 0;
-        font-family: sans-serif;
-    }
+body {
+  display: block;
+  background-color: red;
+  margin: 0;
+  padding: 0px;
+  font-family: system-ui, Helvetica, Arial, sans-serif;
+}
 `

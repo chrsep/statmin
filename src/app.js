@@ -26,7 +26,7 @@ export default () => (
   </Container>
 )
 
-// STYLES
+// STYLES (using styled-components)
 const Container = styled.div`
   text-align: center;
 `

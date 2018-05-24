@@ -6,5 +6,8 @@
   "files.associations": {
     "*.js": "javascriptreact"
   },
-  "cSpell.words": ["DEVTOOLS", "middlewares"]
+  "jest.pathToJest": "npm test --",
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false
 }
