@@ -1,28 +1,17 @@
 // @flow
 import React from "react"
 import styled from "styled-components"
-import { Route, Link } from "react-router-dom"
+import { Route } from "react-router-dom"
+import { Login } from "./pages"
 import logo from "./assets/logo.svg"
-import { Login, ReposOverview, PostsOverview } from "./pages"
 
 // COMPONENT
 export default () => (
   <Container>
     <AppHeader>
       <AppLogo src={logo} alt="logo" />
-      <Link href="/" to="/">
-        Home
-      </Link>
-      <Link href="/repos" to="/repos">
-        notHome
-      </Link>
-      <Link href="/posts" to="/posts">
-        Someone Else Home
-      </Link>
     </AppHeader>{" "}
     <Route exact path="/" component={Login} />
-    <Route exact path="/repos" component={ReposOverview} />
-    <Route exact path="/posts" component={PostsOverview} />
   </Container>
 )
 

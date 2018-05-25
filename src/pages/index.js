@@ -12,16 +12,6 @@ export const Login = Loadable({
   loading: () => <Loading>Loading</Loading>
 })
 
-export const ReposOverview = Loadable({
-  loader: () => import("./reposOverview/reposOverview"),
-  loading: () => <Loading>Loading</Loading>
-})
-
-export const PostsOverview = Loadable({
-  loader: () => import("./postsOverview/postOverview"),
-  loading: () => <Loading>Loading</Loading>
-})
-
 const Loading = styled.div`
   background: black;
 `
