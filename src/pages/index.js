@@ -8,17 +8,17 @@ import styled from "styled-components"
 
 // DYNAMIC IMPORTS
 export const Login = Loadable({
-  loader: () => import("./login"),
+  loader: () => import("./login/login"),
   loading: () => <Loading>Loading</Loading>
 })
 
 export const ReposOverview = Loadable({
-  loader: () => import("./reposOverview"),
+  loader: () => import("./reposOverview/reposOverview"),
   loading: () => <Loading>Loading</Loading>
 })
 
 export const PostsOverview = Loadable({
-  loader: () => import("./postsOverview"),
+  loader: () => import("./postsOverview/postOverview"),
   loading: () => <Loading>Loading</Loading>
 })
 

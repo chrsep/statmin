@@ -1,7 +1,7 @@
 // @flow
 import React from "react"
 import ReactDOM from "react-dom"
-import App from "../../src/app"
+import App from "./app"
 
 it("renders without crashing", () => {
   const a: string = ""

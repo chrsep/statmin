@@ -1,9 +1,9 @@
 // @flow
 import React from "react"
-import AppIntro from "../components/appIntro"
+import { Button } from "../../components"
 
 export default () => (
-  <AppIntro>
+  <Button>
     To get started, edit <code> src / App.js </code> and save to reload.{" "}
-  </AppIntro>
+  </Button>
 )
