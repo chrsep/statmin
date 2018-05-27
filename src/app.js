@@ -7,25 +7,24 @@ import logo from "./assets/logo.svg"
 
 // COMPONENT
 export default () => (
-  <Container>
+  <React.Fragment>
     <AppHeader>
       <AppLogo src={logo} alt="logo" />
+      Statmin
     </AppHeader>{" "}
     <Route exact path="/" component={Login} />
-  </Container>
+  </React.Fragment>
 )
 
 // STYLES (using styled-components)
-const Container = styled.div`
-  text-align: center;
-`
 const AppHeader = styled.header`
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+  height: 2rem;
+  padding: 1rem;
   color: white;
+  display: flex;
+  align-items: center;
 `
 const AppLogo = styled.img`
   animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  height: 2rem;
 `

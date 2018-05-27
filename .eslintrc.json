@@ -21,7 +21,12 @@
     "import/no-extraneous-dependencies": [
       "error",
       {
-        "devDependencies": [".storybook/**", "**/*.story.js"]
+        "devDependencies": [
+          ".storybook/**",
+          "**/*.story.js",
+          "**/*.test.js",
+          "src/setupTests.js"
+        ]
       }
     ]
   }

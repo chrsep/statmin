@@ -1,3 +1,4 @@
+// @flow
 /**
  * Create the store with dynamic reducers
  */
@@ -5,11 +6,12 @@
 import { createStore, applyMiddleware, compose } from "redux"
 import createSagaMiddleware from "redux-saga"
 import { fromJS } from "immutable"
-import createReducer from "./reducers"
+import type { State } from "./reducers"
+import { createReducer, initialState } from "./reducers"
 
 const sagaMiddleware = createSagaMiddleware()
 
-export default function configureStore(initialState = {}) {
+export default function configureStore(state: State = initialState) {
   const middlewares = [sagaMiddleware]
   const enhancers = [applyMiddleware(...middlewares)]
 
@@ -25,7 +27,7 @@ export default function configureStore(initialState = {}) {
 
   const store = createStore(
     createReducer(),
-    fromJS(initialState),
+    fromJS(state),
     composeEnhancers(...enhancers)
   )
 

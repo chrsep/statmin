@@ -11,6 +11,6 @@ Admin page for static website
 * Extensibility (able to extend beyond jekyll and github, such as to gitlab/bitbucket and middleman/hugo/hexo/etc... with custom CI/CD setup)
 * beautiful responsive efficient UI design
 
-## Future Features:
+## Future Features
 
 * Multi account support
