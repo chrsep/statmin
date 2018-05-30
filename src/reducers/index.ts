@@ -4,8 +4,7 @@
  */
 
 import { combineReducers } from "redux-immutable"
-import userReducer, { initialUserState } from "./userReducer"
-import type { UserState } from "./userReducer"
+import userReducer, { UserState, initialUserState } from "./userReducer"
 
 /**
  * Creates the main reducer with the dynamically injected ones
@@ -17,7 +16,7 @@ export function createReducer() {
 }
 
 export type State = {
-  ...UserState
+  userReducer: UserState
 }
 
 export const initialState: State = {

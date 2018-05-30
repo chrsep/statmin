@@ -1,12 +1,11 @@
-// @flow
-import type { Action } from "../actions"
+import { Action } from "../actions"
 
 export const initialUserState = {
   accessToken: ""
 }
 
 export type UserState = {
-  +accessToken: string
+  readonly accessToken: string
 }
 
 export default (state: UserState = initialUserState, action: Action) => {

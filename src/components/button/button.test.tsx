@@ -1,9 +1,9 @@
-import React from "react"
+import * as React from "react"
 import { mount } from "enzyme"
-import Login from "./login"
+import Button from "./button"
 
 describe("Button Component", () => {
   it("renders correctly", () => {
-    mount(<Login />)
+    mount(<Button />)
   })
 })

@@ -6,8 +6,7 @@
 import { createStore, applyMiddleware, compose } from "redux"
 import createSagaMiddleware from "redux-saga"
 import { fromJS } from "immutable"
-import type { State } from "./reducers"
-import { createReducer, initialState } from "./reducers"
+import { State, createReducer, initialState } from "./reducers"
 
 const sagaMiddleware = createSagaMiddleware()
 
@@ -20,8 +19,8 @@ export default function configureStore(state: State = initialState) {
   const composeEnhancers =
     process.env.NODE_ENV !== "production" &&
     typeof window === "object" &&
-    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
-      ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+    (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+      ? (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
       : compose
   /* eslint-enable */
 
