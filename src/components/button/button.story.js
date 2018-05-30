@@ -7,7 +7,7 @@ import Button from "./button"
 
 storiesOf("Button", module)
   .add("with text", () => (
-    <Button onClick={action("clicked")}>Hello Button</Button>
+    <Button onClick={action("clicked")}>Grant Access</Button>
   ))
   .add("with some emoji", () => (
     <Button onClick={action("clicked")}>
