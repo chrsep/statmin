@@ -2,11 +2,21 @@
   "compilerOptions": {
     "outDir": "./dist/",
     "sourceMap": true,
-    "noImplicitAny": true,
     "module": "esNext",
     "target": "es6",
     "jsx": "react",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "rootDirs": ["src", "stories"],
+    "baseUrl": "src",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true
   },
-  "include": ["./src/**/*"]
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules", "build", "scripts"]
 }

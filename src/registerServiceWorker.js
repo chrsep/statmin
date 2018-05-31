@@ -20,7 +20,7 @@ const isLocalhost = Boolean(
     )
 )
 
-function registerValidSW(swUrl: string) {
+function registerValidSW(swUrl) {
   navigator.serviceWorker
     .register(swUrl)
     .then(registration => {
@@ -49,7 +49,7 @@ function registerValidSW(swUrl: string) {
     })
 }
 
-function checkValidServiceWorker(swUrl: string) {
+function checkValidServiceWorker(swUrl) {
   // Check if the service worker can be found. If it can't reload the page.
   fetch(swUrl)
     .then(response => {

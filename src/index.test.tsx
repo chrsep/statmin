@@ -1,11 +1,10 @@
-// @flow
-import * as React from "react"
 import { mount } from "enzyme"
-import { BrowserRouter as Router } from "react-router-dom"
+import * as React from "react"
 import { Provider } from "react-redux"
+import { BrowserRouter as Router } from "react-router-dom"
+import configureStore from "./redux/configureStore"
 import App from "./app"
 import "./globalStyles"
-import configureStore from "./configureStore"
 
 it("renders without crashing", () => {
   const store = configureStore()

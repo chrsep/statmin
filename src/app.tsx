@@ -1,19 +1,19 @@
 // @flow
 import * as React from "react"
-import styled from "styled-components"
 import { Route } from "react-router-dom"
-import { Login } from "./pages"
+import styled from "styled-components"
 import logo from "./assets/logo.svg"
+import { Login } from "./pages"
 
 // COMPONENT
 export default () => (
-  <React.Fragment>
+  <>
     <AppHeader>
       <AppLogo src={logo} alt="logo" />
       Statmin
     </AppHeader>{" "}
-    <Route exact path="/" component={Login} />
-  </React.Fragment>
+    <Route exact={true} path="/" component={Login} />
+  </>
 )
 
 // STYLES (using styled-components)

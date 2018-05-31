@@ -1,16 +1,18 @@
 import * as React from "react"
 import * as ReactDOM from "react-dom"
-import { BrowserRouter as Router } from "react-router-dom"
 import { Provider } from "react-redux"
+import { BrowserRouter as Router } from "react-router-dom"
 import App from "./app"
-import configureStore from "./configureStore"
-import registerServiceWorker from "./registerServiceWorker"
+import configureStore from "./redux/configureStore"
 import "./globalStyles"
+import registerServiceWorker from "./registerServiceWorker"
 
 const store = configureStore()
 const rootElement = document.getElementById("root")
 
-if (rootElement === null) throw new Error("Root element not found")
+if (rootElement === null) {
+  throw new Error("Root element not found")
+}
 ReactDOM.render(
   <Router>
     <Provider store={store}>

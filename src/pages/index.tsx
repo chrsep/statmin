@@ -1,6 +1,6 @@
 // @flow
 import * as React from "react"
-import * as Loadable from "react-loadable"
+import Loadable from "react-loadable"
 import styled from "styled-components"
 
 // Import into the pages folder goes through here
