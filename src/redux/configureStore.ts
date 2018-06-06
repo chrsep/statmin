@@ -41,6 +41,12 @@ export default function configureStore(state: State = initialState) {
   //       store.replaceReducer(createReducer(store.injectedReducers))
   //     })
   //   }
-
+  if (process.env.NODE_ENV !== "production") {
+    if (module.hot) {
+      module.hot.accept("./reducers", () => {
+        store.replaceReducer(createReducer())
+      })
+    }
+  }
   return store
 }

@@ -1,3 +1,7 @@
+// Makes redux typing easier with less boilerplate
+// based on:
+// https://medium.com/@martin_hotell/improved-redux-type-safety-with-typescript-2-8-2c11a8062575{
+
 export interface Action<T extends string> {
   type: T
 }
