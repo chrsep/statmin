@@ -1,9 +1,8 @@
 import { Reducer } from "redux"
 import { combineReducers } from "redux-immutable"
-import { Actions } from "./../actions"
 import userReducer, { initialUserState, UserState } from "./userReducer"
 
-export function createReducer(): Reducer<State | undefined, Actions> {
+export function createReducer(): Reducer<State> {
   return combineReducers({
     userReducer
   })

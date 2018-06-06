@@ -1,4 +1,4 @@
-import { ActionWithPayload, createAction } from "../actionHelpers"
+import { createAction } from "../actionHelpers"
 
 export const CHANGE_ACCESS_TOKEN = "CHANGE_ACCESS_TOKEN"
 

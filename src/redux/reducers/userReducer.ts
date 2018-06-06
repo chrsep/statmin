@@ -1,4 +1,3 @@
-import { ActionWithPayload } from "../actionHelpers"
 import { Actions } from "../actions"
 
 export const initialUserState = {

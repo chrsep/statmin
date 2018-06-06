@@ -1,14 +1,9 @@
 {
-  "defaultSeverity": "warning",
-  "extends": [
-    "tslint:recommended",
-    "tslint-react",
-    "tslint-eslint-rules",
-    "tslint-config-prettier"
-  ],
-  "jsRules": {},
+  "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
+  "linterOptions": {
+    "exclude": ["config/**/*.js", "node_modules/**/*.ts"]
+  },
   "rules": {
     "interface-name": false
-  },
-  "rulesDirectory": []
+  }
 }

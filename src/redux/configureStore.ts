@@ -3,7 +3,7 @@
  */
 
 import { fromJS } from "immutable"
-import { AnyAction, applyMiddleware, compose, createStore, Store } from "redux"
+import { applyMiddleware, compose, createStore, Store } from "redux"
 import createSagaMiddleware from "redux-saga"
 import { createReducer, initialState, State } from "./reducers"
 
@@ -23,7 +23,7 @@ export default function configureStore(state: State = initialState) {
       : compose
   /* eslint-enable */
 
-  const store: Store<State, AnyAction> = createStore(
+  const store: Store<State> = createStore(
     createReducer(),
     fromJS(state),
     composeEnhancers(...enhancers)

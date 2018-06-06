@@ -1,7 +1,7 @@
 import { ComponentClass } from "react" /* required because of issue with typescript#5711 */
 import { ThemedStyledComponentsModule } from "styled-components"
 import * as styledComponents from "styled-components"
-import ThemeInterface from "../theme"
+import ThemeInterface from "./theme"
 
 const {
   default: styled,
