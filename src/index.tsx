@@ -13,8 +13,9 @@ const rootElement = document.getElementById("root")
 if (rootElement === null) {
   throw new Error("Root element not found")
 }
+const store = configureStore()
 const Wrapper = () => (
-  <Provider store={configureStore()}>
+  <Provider store={store}>
     <Router>
       <ThemeProvider theme={darkTheme}>
         <App />

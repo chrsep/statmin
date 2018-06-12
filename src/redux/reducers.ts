@@ -1,6 +1,6 @@
 import { Reducer } from "redux"
 import { combineReducers } from "redux-immutable"
-import userReducer, { initialUserState, UserState } from "./userReducer"
+import userReducer, { initialUserState, UserState } from "./user/userReducer"
 
 export function createReducer(): Reducer<State> {
   return combineReducers({

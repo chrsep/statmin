@@ -1,5 +1,5 @@
-import { ActionsUnion } from "../actionHelpers"
-import { userActions } from "./userAction"
+import { ActionsUnion } from "./actionHelpers"
+import { userActions } from "./user/userAction"
 
 export const Actions = {
   ...userActions

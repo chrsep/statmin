@@ -10,7 +10,7 @@ export default () => (
   <>
     <AppHeader>
       <AppLogo src={logo} alt="logo" />
-      Statmin
+      statmin
     </AppHeader>{" "}
     <Route exact={true} path="/" component={Login} />
   </>
@@ -18,13 +18,14 @@ export default () => (
 
 // STYLES (using styled-components)
 const AppHeader = styled.header`
-  height: 2rem;
-  padding: 1rem;
   color: white;
   display: flex;
   align-items: center;
+  font-size: 2.2rem;
+  padding: 1.8rem;
 `
 const AppLogo = styled.img`
   animation: App-logo-spin infinite 20s linear;
-  height: 2rem;
+  height: 3rem;
+  margin-right: 1rem;
 `

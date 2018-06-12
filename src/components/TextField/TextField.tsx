@@ -1,7 +1,7 @@
 import * as React from "react"
 import styled from "../../styled-components"
 
-interface Props {
+interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string
   className?: string
   onChange?: (event: object) => any
@@ -30,7 +30,7 @@ const TextFieldInput = styled.input`
   border-bottom: 2px solid ${({ theme }) => theme.white};
   padding: 0.4rem 1px;
   transition: all 0.2s;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   opacity: 0.6;
   :focus {
     opacity: 1;

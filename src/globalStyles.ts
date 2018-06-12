@@ -16,4 +16,8 @@ html {
   font-family: system-ui, Helvetica, Arial, sans-serif;
   font-size: 10px;
 }
+body {
+  padding: 0;
+  margin: 0;
+}
 `
