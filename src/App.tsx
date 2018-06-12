@@ -1,9 +1,9 @@
 // @flow
 import * as React from "react"
 import { Route } from "react-router-dom"
-import styled from "styled-components"
 import logo from "./assets/logo.svg"
 import { Login } from "./pages"
+import styled from "./styled-components"
 
 // COMPONENT
 export default () => (

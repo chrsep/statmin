@@ -14,5 +14,6 @@ html {
   margin: 0;
   padding: 0px;
   font-family: system-ui, Helvetica, Arial, sans-serif;
+  font-size: 10px;
 }
 `

@@ -5,18 +5,25 @@ exports[`Button Component renders correctly 1`] = `
   color: white;
   border-color: #4fe6c4;
   font-weight: bold;
+  font-size: 1.6rem;
   background: transparent;
   border-style: solid;
-  border-width: 3px;
+  border-width: 2px;
   border-radius: 10rem;
   padding: 0.8rem;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.c0:hover {
-  background-color: #4fe6c4;
-  color: black;
+.c0:active {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 <button
