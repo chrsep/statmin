@@ -3,17 +3,21 @@ import { Button } from "../../components"
 import TextField from "../../components/TextField/TextField"
 import styled from "../../styled-components"
 
-export default () => (
-  <LoginPage>
-    <HeroText>Manage your jekyll site on GitHub with ease. </HeroText>
-    <StyledTextField label="Personal access token" />
-    <ButtonContainer>
-      <Button>Grant Access</Button>
-    </ButtonContainer>
-  </LoginPage>
-)
+export default class LoginPage extends React.Component {
+  public render() {
+    return (
+      <StyledLoginPage>
+        <HeroText>Manage your jekyll site on GitHub with ease. </HeroText>
+        <StyledTextField label="Personal access token" />
+        <ButtonContainer>
+          <Button>Grant Access</Button>
+        </ButtonContainer>
+      </StyledLoginPage>
+    )
+  }
+}
 
-const LoginPage = styled.div`
+const StyledLoginPage = styled.div`
   display: flex;
   flex-flow: column;
   flex-grow: 0;
