@@ -6,6 +6,7 @@ import { fromJS } from "immutable"
 import { applyMiddleware, compose, createStore, Store } from "redux"
 import createSagaMiddleware from "redux-saga"
 import { createReducer, initialState, State } from "./reducers"
+import rootSaga from "./sagas"
 
 const sagaMiddleware = createSagaMiddleware()
 
@@ -29,18 +30,8 @@ export default function configureStore(state: State = initialState) {
     composeEnhancers(...enhancers)
   )
 
-  // Extensions
-  // TODO: uncomment when needed
-  //   store.runSaga = sagaMiddleware.run
-  //   store.injectedReducers = {} // Reducer registry
-  //   store.injectedSagas = {} // Saga registry
+  sagaMiddleware.run(rootSaga)
 
-  // TODO: If reducer not hot reload, un-comment below
-  //   if (module.hot) {
-  //     module.hot.accept("./reducers", () => {
-  //       store.replaceReducer(createReducer(store.injectedReducers))
-  //     })
-  //   }
   if (process.env.NODE_ENV !== "production") {
     if (module.hot) {
       module.hot.accept("./reducers", () => {
