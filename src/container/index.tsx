@@ -7,7 +7,7 @@ import styled from "styled-components"
 
 // DYNAMIC IMPORTS
 export const Login = Loadable({
-  loader: () => import("./Login/Login"),
+  loader: () => import("./FormLogin/FormLogin"),
   loading: () => <Loading>Loading</Loading>
 })
 

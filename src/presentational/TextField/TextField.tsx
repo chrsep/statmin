@@ -8,18 +8,17 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
 }
 
 export default ({ className, label, ...props }: Props) => (
-  <div className={className}>
-    <TextFieldLabel>
-      {label}
-      <TextFieldInput {...props} />
-    </TextFieldLabel>
-  </div>
+  <TextFieldLabel className={className}>
+    {label}
+    <TextFieldInput {...props} />
+  </TextFieldLabel>
 )
 const TextFieldLabel = styled.label`
   color: ${({ theme }) => theme.white};
   font-size: 1.4rem;
   display: flex;
   flex-flow: column;
+  width: 100%;
 `
 const TextFieldInput = styled.input`
   color: ${({ theme }) => theme.white};

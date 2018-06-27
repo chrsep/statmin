@@ -1,21 +1,19 @@
 import * as React from "react"
 import { Route } from "react-router-dom"
 import logo from "./assets/logo.svg"
-import { Login } from "./pages"
+import { PageLogin } from "./presentational"
 import styled from "./styled-components"
 
-// COMPONENT
 export default () => (
   <>
     <AppHeader>
       <AppLogo src={logo} alt="logo" />
       statmin
     </AppHeader>{" "}
-    <Route exact={true} path="/" component={Login} />
+    <Route exact={true} path="/" component={PageLogin} />
   </>
 )
 
-// STYLES (using styled-components)
 const AppHeader = styled.header`
   color: white;
   display: flex;
