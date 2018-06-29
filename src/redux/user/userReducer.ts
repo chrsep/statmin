@@ -1,7 +1,6 @@
-import { Actions } from "../actions"
-import { CHANGE_ACCESS_TOKEN } from "./userAction"
+import { SET_TOKEN_USER, UserActions } from "./userAction"
 
-export const initialUserState = {
+export const initialUserState: UserState = {
   accessToken: ""
 }
 
@@ -9,10 +8,13 @@ export interface UserState {
   readonly accessToken: string
 }
 
-export default (state: UserState = initialUserState, action: Actions) => {
+export default (
+  state: UserState = initialUserState,
+  action: UserActions
+): UserState => {
   switch (action.type) {
-    case CHANGE_ACCESS_TOKEN:
-      return action.payload
+    case SET_TOKEN_USER:
+      return { ...state, accessToken: action.payload }
     default:
       return state
   }

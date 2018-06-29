@@ -1,20 +1,14 @@
 import * as React from "react"
-import { connect, ProviderProps } from "react-redux"
+import { connect } from "react-redux"
 import { compose } from "redux"
 import { Button, TextField } from "../../presentational"
 import { Actions } from "../../redux/actions"
 
-interface Props extends ProviderProps {
-  getRepoList: (token: string) => any
+interface Props {
+  login: () => any
+  setToken: (token: string) => any
 }
-interface State {
-  token: string
-}
-class FormLogin extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props)
-    this.state = { token: "" }
-  }
+export class FormLogin extends React.Component<Props> {
   public render() {
     return (
       <>
@@ -24,20 +18,21 @@ class FormLogin extends React.Component<Props, State> {
     )
   }
   private handleChange = (event: React.FormEvent<HTMLInputElement>) => {
-    this.setState({ token: event.currentTarget.value })
+    this.props.setToken(event.currentTarget.value)
   }
   private handleLogin = () => {
-    this.props.getRepoList(this.state.token)
+    this.props.login()
   }
 }
 
 const mapDispatchToProps = {
-  getRepoList: (token: string) => Actions.getRepoList(token)
+  login: () => Actions.login(),
+  setToken: (token: string) => Actions.setAcessToken(token)
 }
 
 export default compose(
   connect(
-    undefined,
+    null,
     mapDispatchToProps
   )
 )(FormLogin)

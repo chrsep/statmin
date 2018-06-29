@@ -1,8 +1,10 @@
 import { ActionsUnion } from "./actionHelpers"
-import { userActions } from "./user/userAction"
+import { ReposAction } from "./repos/reposAction"
+import { UserActions } from "./user/userAction"
 
 export const Actions = {
-  ...userActions
+  ...UserActions,
+  ...ReposAction
 }
 
 export type Actions = ActionsUnion<typeof Actions>

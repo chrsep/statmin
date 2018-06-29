@@ -1,12 +1,11 @@
 import { ActionsUnion, createAction } from "../actionHelpers"
 
-export const CHANGE_ACCESS_TOKEN = "CHANGE_ACCESS_TOKEN"
-export const GET_REPO_LIST = "GET_REPO_LIST"
+export const SET_TOKEN_USER = "SET_TOKEN_USER"
+export const LOGIN_USER = "LOGIN_USER"
 
-export const userActions = {
-  changeAccessToken: (token: string) =>
-    createAction(CHANGE_ACCESS_TOKEN, token),
-  getRepoList: (token: string) => createAction(GET_REPO_LIST, token)
+export const UserActions = {
+  login: () => createAction(LOGIN_USER),
+  setAcessToken: (token: string) => createAction(SET_TOKEN_USER, token)
 }
 
-export type userActions = ActionsUnion<typeof userActions>
+export type UserActions = ActionsUnion<typeof UserActions>
