@@ -1,4 +1,4 @@
-import { ActionsUnion } from "./actionHelpers"
+import { ActionsUnion } from "./reduxHelpers"
 import { ReposAction } from "./repos/reposAction"
 import { UserActions } from "./user/userAction"
 

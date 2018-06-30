@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/immutable": "^3.8.7",
     "@types/react-loadable": "^5.4.0",
     "@types/react-redux": "^6.0.3",
     "@types/react-router-dom": "^4.2.7",
     "@types/redux-immutable": "^3.0.38",
     "axios": "^0.18.0",
+    "immutable": "^3.8.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-loadable": "^5.4.0",

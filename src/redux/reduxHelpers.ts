@@ -1,3 +1,5 @@
+import { Map } from "immutable"
+
 // Makes redux typing easier with less boilerplate
 // based on:
 // https://medium.com/@martin_hotell/improved-redux-type-safety-with-typescript-2-8-2c11a8062575{
@@ -26,3 +28,9 @@ export interface ActionCreatorsMapObject {
 export type ActionsUnion<A extends ActionCreatorsMapObject> = ReturnType<
   A[keyof A]
 >
+
+export interface TypedMap<T> extends Map<any, any> {
+  toJs(): T
+  get<K extends keyof T>(key: K): T[K]
+  set<K extends keyof T>(key: K, value: T[K]): TypedMap<T>
+}

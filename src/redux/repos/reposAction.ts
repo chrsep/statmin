@@ -1,4 +1,4 @@
-import { ActionsUnion, createAction } from "../actionHelpers"
+import { ActionsUnion, createAction } from "../reduxHelpers"
 
 export const UPDATE_REPOS = "UPDATE_REPOS"
 export const SET_REPOS = "SET_REPOS"

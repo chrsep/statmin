@@ -10,7 +10,7 @@ import rootSaga from "./sagas"
 
 const sagaMiddleware = createSagaMiddleware()
 
-export default function configureStore(state: State = initialState) {
+export default function configureStore(state = initialState) {
   const middlewares = [sagaMiddleware]
   const enhancers = [applyMiddleware(...middlewares)]
 

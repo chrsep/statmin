@@ -1,6 +1,7 @@
 import { Reducer } from "redux"
 import { combineReducers } from "redux-immutable"
-import UserReducer, { initialUserState, UserState } from "./user/userReducer"
+import { TypedMap } from "./reduxHelpers"
+import UserReducer, { initialUserState } from "./user/userReducer"
 
 export function createReducer(): Reducer<State> {
   return combineReducers({
@@ -8,10 +9,8 @@ export function createReducer(): Reducer<State> {
   })
 }
 
-export interface State {
-  user: UserState
-}
-
-export const initialState: State = {
+export const initialState = {
   user: initialUserState
 }
+
+export type State = TypedMap<typeof initialState>
